@@ -34,9 +34,10 @@ Representação da topologia:
         devops-control-     devops-    devops-
            plane            worker     worker2
 
+```
 ## 4. Arquivos Terraform
 
-### main.tf
+#### main.tf
 
 O arquivo main.tf define o provider do Kind e o recurso kind_cluster, responsável por solicitar ao Terraform a criação do cluster.
 
