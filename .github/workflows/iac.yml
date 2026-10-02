@@ -10,5 +10,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: echo "${{ github.head_ref || github.ref_name }}"
-        run: hostname
+      - name: hostname
+        run: echo "${{ github.head_ref || github.ref_name }}"
