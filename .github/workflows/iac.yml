@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ hostname ]
 
 jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: hostname
+      - name: echo "${{ github.head_ref || github.ref_name }}"
         run: hostname
