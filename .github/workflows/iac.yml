@@ -26,13 +26,17 @@ jobs:
         uses: hashicorp/setup-terraform@v4
       
       - name: Terraform Format
-        uses: terraform fmt -check -recursive
+        run: terraform fmt -check -recursive
 
       - name: Terraform Init
-        uses: terraform init
+        run: terraform init
       
       - name: Terraform Validate
         run: terraform validate 
+
+      - name: Terraform Plan
+        run: terraform plan -input=false
+
 
     steps:
       - name: hostname
