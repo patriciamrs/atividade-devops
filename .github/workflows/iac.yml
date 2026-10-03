@@ -37,7 +37,3 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -input=false
 
-
-    steps:
-      - name: hostname
-        run: echo "${{ github.head_ref || github.ref_name }}"
